@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hǎiyàn Consulting</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #2F4F2F; /* Vert sombre */
+            color: #FFD700; /* Doré */
+            text-align: center;
+        }
+        header {
+            background-color: #228B22;
+            padding: 10px;
+        }
+        nav a {
+            color: #FFD700;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .content {
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #FFD700;
+        }
+        .logo {
+            max-width: 200px;
+        }
+        .button {
+            background-color: #FFD700;
+            color: #2F4F2F;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #228B22;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Hǎiyàn Consulting Logo" class="logo">
+        <nav>
+            <a href="#home">Accueil</a>
+            <a href="#services">Services</a>
+            <a href="#about">À propos</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="content" id="home">
+        <h1>海妍 咨询</h1>
+        <h2>Hǎiyàn Consulting</h2>
+        <p>Chinese Traduction & Translation</p>
+        <p>Bienvenue chez Hǎiyàn Consulting ! Nous offrons des services de traduction et d’interprétation chinois-français de haute qualité.</p>
+        <a href="#contact" class="button">Demander un devis</a>
+    </div>
+
+    <div class="content" id="services" style="display:none;">
+        <h2>Nos Services</h2>
+        <ul>
+            <li>Traduction écrite (documents, sites web) - à partir de 0,15 €/mot</li>
+            <li>Interprétation orale (réunions, conférences) - à partir de 50 €/heure</li>
+            <li>Spécialisations : commerce, éducation, juridique</li>
+        </ul>
+        <a href="#contact" class="button">Contacter pour plus d’infos</a>
+    </div>
+
+    <div class="content" id="about" style="display:none;">
+        <h2>À propos</h2>
+        <p>Fondée par ZANNOU Mireille Hǎiyàn , diplômée en didactique chinoise, Hǎiyàn Consulting allie expertise linguistique et passion culturelle pour des solutions sur mesure.</p>
+    </div>
+
+    <div class="content" id="contact" style="display:none;">
+        <h2>Contact</h2>
+        <p>Email : [estherekeffa28@gmail.com]</p>
+        <form>
+            <input type="text" placeholder="Votre nom" required><br><br>
+            <input type="email" placeholder="estherekeffa28@gmail.com" required><br><br>
+            <textarea placeholder="Votre message" required></textarea><br><br>
+            <button type="submit" class="button">Envoyer</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Hǎiyàn Consulting | Suivez-nous sur <a href="https://x.com" style="color: #FFD700;">X</a> et <a href="https://linkedin.com" style="color: #FFD700;">LinkedIn</a></p>
+    </footer>
+
+    <script>
+        // Navigation simple entre sections
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                document.querySelectorAll('.content').forEach(content => content.style.display = 'none');
+                target.style.display = 'block';
+            });
+        });
+        // Afficher la page d'accueil par défaut
+        document.getElementById('home').style.display = 'block';
+    </script>
+</body>
+</html>
