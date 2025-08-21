@@ -1,5 +1,5 @@
 {
-  "name": "haiyan-traduction",
+  "name": "Hǎiyán Traduction",
   "version": "1.0.0",
   "private": true,
   "scripts": {
